@@ -1,0 +1,40 @@
+version: '3.1'
+services:
+  # odoo service
+  odoo17:
+    container_name: web17
+    image: odoo:17.0
+    user: root
+    depends_on:
+      - db
+    ports:
+      - "8088:8069"
+      - "8182:8072" # live chat
+    tty: true
+    command: --
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=odoo17@2024
+    volumes:
+      #- /etc/timezone:/etc/timezone:ro
+      #- /etc/localtime:/etc/localtime:ro
+      - ./entrypoint.sh:/entrypoint.sh   
+      - ./addons:/mnt/extra-addons
+      - ./etc:/etc/odoo
+    restart: always      
+
+    
+  # database service
+  db:
+    container_name: postgres
+    image: postgres:16
+    user: root
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo17@2024
+      - POSTGRES_DB=postgres
+    restart: always             # run as a service
+    volumes:
+        - ./etc/postgresql/data:/var/lib/postgresql/data
+    

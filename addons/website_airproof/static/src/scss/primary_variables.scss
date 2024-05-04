@@ -1,0 +1,42 @@
+$o-theme-font-configs: map-merge($o-theme-font-configs,(
+    'Jacquard 24': (
+        'family': 'Jacquard 24, sans-serif',
+        'url':     'Jacquard+24:400,400i',  
+        'properties' : (
+            'base': (
+                'font-size-base': 1.25rem,
+            ),
+        ),
+    )
+));
+
+$o-color-palettes: map-merge($o-color-palettes,
+    (
+        'king': (
+            'o-color-1': #579c5d,
+            'o-color-2': #1a5b1d,
+            'o-color-3': #f1f1f1,
+            'o-color-4': #ffffff,
+            'o-color-5': #000000,
+
+            'menu': 1,
+            'footer': 3,
+        ),
+    )
+);
+
+$o-selected-color-palettes-names: append(
+    $o-selected-color-palettes-names, 
+    'king'
+);
+
+$o-website-values-palettes:(
+    (
+        'font':              'Jacquard 24',
+        'headings-font':     'Jacquard 24',
+        'navbar-font':       'Jacquard 24',
+        'buttons-font':      'Jacquard 24',
+
+        'color-palettes-name': 'king',
+    ),
+);
