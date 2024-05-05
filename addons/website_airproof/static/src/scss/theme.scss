@@ -1,5 +1,83 @@
-blockquote {
-    border-radius: $rounded-pill;
-    color: o-color('o-color-3');
-    font-family: o-website-value('headings-font');
+////////////////////// Đinh nghĩa lại style cho button////////////////////
+.btn-primary {
+    color: #ffffff!important; /* Thay đổi màu của văn bản */
+    transition: background-color 0.5s ease;
+    border-radius: 32px;
+    font-weight: bold;
+}
+
+
+/* Thêm ký tự "->" vào sau text */
+.btn-primary::after {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Hiệu ứng khi hover */
+.btn-primary:hover {
+    color: #ffffff!important;
+    background-color: #0dbdd4!important;
+} 
+
+.btn-primary:hover::after {
+    opacity: 1;
+}
+
+////////////////////// Đinh nghĩa lại style cho table////////////////////
+.o_table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: transparent;
+
+    // Bỏ border dọc
+    th, td {
+        border-right: none;
+        border-left: none;
+    }
+
+    // border top của row đầu tiên có màu xanh và độ dày là 2px
+    tr:first-child {
+        border-top: 2px solid #0086D1;
+    }
+    
+    // Cột đầu tiên có chiều rộng là 30%
+    th:first-child, td:first-child {
+        width: 30%;
+    }
+
+    // Text trong cột đầu tiên có màu xanh và in đậm
+    th:first-child, td:first-child {
+        color: #0086D1;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    // Text trong thẻ p của td sẽ nằm ở midle và bên trái
+    td p {
+            display: flex;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            unicode-bidi: isolate;
+            vertical-align: middle;
+    }
+
+}
+
+////////////////////// Đinh nghĩa lại style cho footer////////////////////
+// tạo class rikai_footer cho padding left và right là 0px
+.rikai_footer > div{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.rikai_footer > div > div{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.rikai_footer > div > div > div{
+    padding-left: 15px;
+    padding-right: 0px;
 }

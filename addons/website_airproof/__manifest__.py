@@ -9,6 +9,8 @@
    "auto_install": False,
    'depends': ['website'],
    'data': [
+       'data/presets.xml',
+       'views/website_templates.xml',
    ],
    'assets': {
        'web._assets_primary_variables': [
