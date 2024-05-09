@@ -7,7 +7,7 @@
    "application": True,
    "installable": True,
    "auto_install": False,
-   'depends': ['website','website_blog'],
+   'depends': ['base','website','website_blog'],
    'data': [
        'data/presets.xml',
        'data/images.xml',
