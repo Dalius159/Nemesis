@@ -7,10 +7,15 @@
    "application": True,
    "installable": True,
    "auto_install": False,
-   'depends': ['website'],
+   'depends': ['website','website_blog'],
    'data': [
        'data/presets.xml',
+       'data/images.xml',
+       'data/menu.xml',
+       'data/pages/about_us.xml',
        'views/website_templates.xml',
+       'views/snippets/s_airproof_snippet.xml',
+       'views/snippets/options.xml',
    ],
    'assets': {
        'web._assets_primary_variables': [

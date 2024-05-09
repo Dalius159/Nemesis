@@ -1,0 +1,7 @@
+<odoo>
+    <template id="s_airproof_snippet" name="Airproof snippet" data-name="s_airproof_snippet" data-snippet="s_airproof_snippet">
+        <section class="s_airproof_snippet">
+            
+        </section>
+    </template>
+</odoo>

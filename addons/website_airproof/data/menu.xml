@@ -1,0 +1,28 @@
+<odoo>
+    <!-- Contact us -->
+    <!-- <delete model="website.menu" search="[('url','in', ['/', '/contactus']),
+    ('website_id', '=', 1)]"/> -->
+
+    <record id="menu_about_us" model="website.menu">
+        <field name="name">About us</field>
+        <field name="url">/about-us</field>
+        <field name="parent_id" search="[('url', '=', '/default-main-menu'),('website_id', '=', 1)]"/>
+        <field name="website_id">1</field>
+        <field name="sequence" type="int">10</field>
+    </record>
+
+    <record id="menu_services" model="website.menu">
+        <field name="name">Services</field>
+        <field name="website_id">1</field>
+        <field name="parent_id" search="[('url', '=', '/default-main-menu'),('website_id', '=', 1)]"/>
+        <field name="sequence" type="int">4</field>
+    </record>
+
+    <record id="menu_services_item_1" model="website.menu">
+        <field name="name">Item 1</field>
+        <field name="url">/dropdown/item-1</field>
+        <field name="website_id">1</field>
+        <field name="parent_id" ref="website_airproof.menu_services"/>
+        <field name="sequence" type="int">4</field>
+    </record>
+</odoo>

@@ -1,91 +1,70 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <!-- <record id="header" model="ir.ui.view">
-        <field name="name">Airproof Header</field>
-        <field name="type">qweb</field>
-        <field name="key">website_airproof.header</field>
-        <field name="inherit_id" ref="website.layout"/>
-        <field name="mode">extension</field>
-        <field name="arch" type="xml">
-           <xpath expr="//header" position="replace">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container">
-                    <a class="navbar-brand" href="#">Logo</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
+    <data>
+        <template id="header" inherit_id="website.template_header_default" name="Template Header Theme" active="True">
+            <xpath expr="//t[@t-call='website.navbar']" position="replace">
+                <t t-call="website.navbar">
+                    <t t-set="_navbar_classes" t-valuef="d-none d-lg-block shadow-sm"/>
+        
+                    <div id="o_main_nav" class="o_main_nav container">
+                        <!-- Brand -->
+                        <a class="navbar-brand">
+                            <img style="height:50px; widht:auto;" src="website_airproof/static/src/img/content/Sun.png"/>
+                        </a>
+                        <!-- Navbar -->
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-valuef="me-auto"/>
+        
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-valuef="nav-item"/>
+                                    <t t-set="link_class" t-valuef="nav-link"/>
+                                </t>
+                            </t>
+                        </t>
+
+                        <!-- Extra elements -->
+                        <ul class="navbar-nav align-items-center gap-2 flex-shrink-0 justify-content-end ps-3">
+                            <!-- Search Bar -->
+                            <t t-call="website.placeholder_header_search_box">
+                                <t t-set="_layout" t-valuef="modal"/>
+                                <t t-set="_input_classes" t-valuef="border border-end-0 p-3"/>
+                                <t t-set="_submit_classes" t-valuef="border border-start-0 px-4 bg-o-color-4"/>
+                                <t t-set="_button_classes" t-valuef="o_navlink_background text-reset"/>
+                            </t>
+                            <!-- Text element -->
+                            <t t-call="website.placeholder_header_text_element"/>
+                            <!-- Social -->
+                            <t t-call="website.placeholder_header_social_links"/>
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes" t-valuef="..."/>
+                             </t>
+                            <!-- <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_btn_class" t-valuef="btn-outline-secondary border-0"/>
+                                <t t-set="_txt_class" t-valuef="small"/>
+                                <t t-set="_dropdown_menu_class" t-valuef="dropdown-menu-end"/>
+                            </t> -->
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-valuef="nav-item"/>
+                                <t t-set="_link_class" t-valuef="nav-link"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_user_name" t-value="True"/>
+                                <t t-set="_item_class" t-valuef="dropdown"/>
+                                <t t-set="_link_class" t-valuef="btn-outline-secondary border-0 fw-bold"/>
+                                <t t-set="_user_name_class" t-valuef="large"/>
+                                <t t-set="_dropdown_menu_class" t-valuef="dropdown-menu-end"/>
+                            </t>
+                            <!-- Call To Action -->
+                            <t t-call="website.placeholder_header_call_to_action"/>
                         </ul>
                     </div>
-                </div>
-            </nav>
-           </xpath>
-        </field>
-     </record> -->
-
-
-     <template id="custom_header" inherit_id="website.layout" name="Custom Header">
-        <xpath expr="//header" position="replace">
-            <header>
-                <nav class="navbar">
-                    <div class="container">
-                        <a class="navbar-brand" href="#">
-                            <img style="height:50px; widht:auto;" src="/theme_yourhome/static/src/img/logo.png"/>
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" 
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link font-weight-medium" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link font-weight-medium" href="#">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link font-weight-medium" href="#">Services</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link font-weight-medium" href="#">Contact</a>
-                                </li>
-                            </ul>
-                            <div class="d-block d-lg-none">
-                                <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item">
-                                        <a class="nav-link font-weight-medium" href="#">Sign In</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="d-none d-lg-block">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link font-weight-medium" href="#">Sign In</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </nav>
-            </header>
-        </xpath>
-    </template>
+                </t>
+            </xpath>
+        </template>
+    </data>
 </odoo>
