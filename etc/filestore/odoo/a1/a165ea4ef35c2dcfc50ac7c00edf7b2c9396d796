@@ -1,10 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Serif:300,300i,400,400i,700,700i&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Arvo:300,300i,400,400i,700,700i&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Jacquard+24:400,400i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap");
 
 /* <inline asset> */
 @charset "UTF-8"; 
@@ -28,7 +22,7 @@
  
 
 /* /web/static/src/scss/utils.scss */
-        #oe_snippets .colorpicker .o_colorpicker_sections .o_custom_gradient_editor .o_custom_gradient_scale, .o_we_cc_preview_wrapper, #oe_snippets > .o_we_customize_panel .o_we_so_color_palette.o_we_user_value_widget .o_we_color_preview, #oe_snippets > .o_we_customize_panel we-select.o_we_user_value_widget we-select-page we-button, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="transparent_grayscale"] .o_we_color_btn, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="theme"] .o_we_color_btn, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="reset"] .o_we_color_btn, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="custom"] .o_we_color_btn{position: relative; z-index: 0;}#oe_snippets .colorpicker .o_colorpicker_sections .o_custom_gradient_editor .o_custom_gradient_scale::before, .o_we_cc_preview_wrapper::before, #oe_snippets > .o_we_customize_panel .o_we_so_color_palette.o_we_user_value_widget .o_we_color_preview::before, #oe_snippets > .o_we_customize_panel we-select.o_we_user_value_widget we-select-page we-button::before, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="transparent_grayscale"] .o_we_color_btn::before, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="theme"] .o_we_color_btn::before, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="reset"] .o_we_color_btn::before, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="custom"] .o_we_color_btn::before{content: ""; position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index: -1; background-image: url("/web/static/img/transparent.png"); background-size: 10px auto; border-radius: inherit;}#oe_snippets .colorpicker .o_colorpicker_sections .o_custom_gradient_editor .o_custom_gradient_scale::after, .o_we_cc_preview_wrapper::after, #oe_snippets > .o_we_customize_panel .o_we_so_color_palette.o_we_user_value_widget .o_we_color_preview::after, #oe_snippets > .o_we_customize_panel we-select.o_we_user_value_widget we-select-page we-button::after, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="transparent_grayscale"] .o_we_color_btn::after, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="theme"] .o_we_color_btn::after, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="reset"] .o_we_color_btn::after, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="custom"] .o_we_color_btn::after{content: ""; position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index: -1; background: inherit; border-radius: inherit;}
+  #oe_snippets .colorpicker .o_colorpicker_sections .o_custom_gradient_editor .o_custom_gradient_scale, .o_we_cc_preview_wrapper, #oe_snippets > .o_we_customize_panel .o_we_so_color_palette.o_we_user_value_widget .o_we_color_preview, #oe_snippets > .o_we_customize_panel we-select.o_we_user_value_widget we-select-page we-button, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="transparent_grayscale"] .o_we_color_btn, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="theme"] .o_we_color_btn, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="reset"] .o_we_color_btn, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="custom"] .o_we_color_btn{position: relative; z-index: 0;}#oe_snippets .colorpicker .o_colorpicker_sections .o_custom_gradient_editor .o_custom_gradient_scale::before, .o_we_cc_preview_wrapper::before, #oe_snippets > .o_we_customize_panel .o_we_so_color_palette.o_we_user_value_widget .o_we_color_preview::before, #oe_snippets > .o_we_customize_panel we-select.o_we_user_value_widget we-select-page we-button::before, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="transparent_grayscale"] .o_we_color_btn::before, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="theme"] .o_we_color_btn::before, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="reset"] .o_we_color_btn::before, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="custom"] .o_we_color_btn::before{content: ""; position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index: -1; background-image: url("/web/static/img/transparent.png"); background-size: 10px auto; border-radius: inherit;}#oe_snippets .colorpicker .o_colorpicker_sections .o_custom_gradient_editor .o_custom_gradient_scale::after, .o_we_cc_preview_wrapper::after, #oe_snippets > .o_we_customize_panel .o_we_so_color_palette.o_we_user_value_widget .o_we_color_preview::after, #oe_snippets > .o_we_customize_panel we-select.o_we_user_value_widget we-select-page we-button::after, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="transparent_grayscale"] .o_we_color_btn::after, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="theme"] .o_we_color_btn::after, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="reset"] .o_we_color_btn::after, .colorpicker .o_colorpicker_sections .o_colorpicker_section[data-name="custom"] .o_we_color_btn::after{content: ""; position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index: -1; background: inherit; border-radius: inherit;}
 
 /* /web/static/src/scss/primary_variables.scss */
  
@@ -81,7 +75,7 @@
 /* /website/static/src/scss/primary_variables.scss */
  
 
-/* /website/static/src/scss/options/user_values.scss */
+/* /_custom/web.assets_frontend/website/static/src/scss/options/user_values.scss */
  
 
 /* /website/static/src/scss/options/colors/user_color_palette.scss */
@@ -90,10 +84,10 @@
 /* /website/static/src/scss/options/colors/user_gray_color_palette.scss */
  
 
-/* /website/static/src/scss/options/colors/user_theme_color_palette.scss */
+/* /_custom/web.assets_frontend/website/static/src/scss/options/colors/user_theme_color_palette.scss */
  
 
-/* /home_city/static/src/scss/primary_variables.scss */
+/* /theme_yourhome/static/src/scss/primary_variables.scss */
  
 
 /* /website/static/src/snippets/s_badge/000_variables.scss */

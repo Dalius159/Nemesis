@@ -4,7 +4,7 @@
     'category': 'Theme',
     'sequence': 10,
     'version': '1.0',
-    'depends': ['website'],
+    'depends': ['website','web','web_editor'],
     'data': [
         'security/ir.model.access.csv',
         'views/header.xml',
